@@ -1,0 +1,63 @@
+﻿@page
+@model AspnCrudDapper.Pages.Produto.EditModel
+@{
+    ViewData["Title"] = "Editar Produto";
+}
+
+<div>
+    <div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><strong>Editar Produto</strong></h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 item_img">
+                        <img src="~/images/editProduto.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-8 item_content">
+                        <form method="post">
+                            <h4>
+                                <span>Atualize os dados do produto !!!</span>
+                            </h4>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="panel">
+                                            <div class="panel-body">
+                                                <div class="col-md-12" style="margin-top:15px;">
+                                                    <input asp-for="produto.ProdutoId" type="hidden" />
+                                                    <label asp-for="produto.Nome" style="font-weight:bold;"></label>
+                                                    <input type='text' class='form-control' asp-for="produto.Nome" />
+                                                    <span class="alert-danger" asp-validation-for="produto.Nome"></span>
+                                                </div>
+                                                <div class="col-md-12" style="margin-top:15px;">
+                                                    <label asp-for="produto.Estoque" style="font-weight:bold;"></label>
+                                                    <input type='text' class='form-control' asp-for="produto.Estoque" />
+                                                    <span class="alert-danger" asp-validation-for="produto.Estoque"></span>
+                                                </div>
+                                                <div class="col-md-12" style="margin-top:15px;">
+                                                    <label asp-for="produto.Preco" style="font-weight:bold;"></label>
+                                                    <input type='text' class='form-control' asp-for="produto.Preco" />
+                                                    <span class="alert-danger" asp-validation-for="produto.Preco"></span>
+                                                </div>
+
+                                                <div class="text-center col-md-12" style="margin-top:35px;">
+                                                    <button class="btn btn-primary btn-sx" type="submit">
+                                                        <i class="glyphicon glyphicon-edit"></i> Editar Produto
+                                                    </button>
+                                                    <a class="btn btn-success btn-sx" asp-page="/Produto/Index"><i class="glyphicon glyphicon-backward"></i> Lista De Produtos</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
