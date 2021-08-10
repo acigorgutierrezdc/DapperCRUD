@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.90, )"
             },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": {
               "target": "Package",
               "version": "[5.0.2, )"
