@@ -22,11 +22,13 @@ namespace AspnCrudDapper
 
         public IConfiguration Configuration { get; }
 
-        
+        public MvcOptions mvcOpt = new();
+
+
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            
+            mvcOpt.EnableEndpointRouting = false;
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies 
@@ -59,8 +61,9 @@ namespace AspnCrudDapper
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            //EnableEndpointRouting = false;
+            //A zika ta aqui.
             app.UseMvc();
+            
         }
     }
 }
